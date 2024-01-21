@@ -16,6 +16,6 @@ const breadsController = require('./controllers/breads_controller.js')
 app.use('/breads', breadsController)
 
 // Listen
-app.listen(PORT, () =>{
+app.listen(PORT, () => {
     console.log('Listening to port', PORT);
 })
