@@ -17,6 +17,10 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     res.send('Welcome to the World of Breads!!')
 })
+// 404 Page Route
+app.get('*', (req, res) => {
+    res.send('404')
+})
 
 // Breads
 const breadsController = require('./controllers/breads_controller.js')
