@@ -1,12 +1,15 @@
 const React = require('react')
 const Default = require('./layouts/default')
 
-function Show ({bread}) {
+function Show ({bread, index}) {
     // confirm we are getting our bread data in the termial
     console.log(bread.name)
     return (
         <Default>
             <h2>Show Page</h2>
+            <form action={`/breads/${index}?_method=DELETE`} method="POST">
+                <input type='submit' value="DELETE"/>
+            </form>
             <h3>{bread.name}</h3>
             <p>
                 and it
