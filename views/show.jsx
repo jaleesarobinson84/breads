@@ -22,6 +22,17 @@ function Show ({bread, index}) {
                 have gluten.
             </p>
             <img src={bread.image} alt={bread.name} />
+
+            {bread.ingredients && (
+                <div>
+                    <h4>Ingredients</h4>
+                    <ul>
+                    {bread.ingredients.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+            ))}
+          </ul>
+        </div>
+      )}
             <li><a href="/breads">GO HOME</a></li>
         </Default>
     )
