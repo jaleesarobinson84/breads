@@ -12,6 +12,14 @@ breads.get('/', (req, res) => {
    
 })
 
+  // EDIT
+  breads.get('/indexArray/edit', (req, res) =>(
+    res.send('edit', {
+      bread: Bread[req.params.indexArray],
+      index: req.params.indexArray
+    })
+  ))
+
 
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {
