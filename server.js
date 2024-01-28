@@ -1,12 +1,14 @@
 const express = require('express')
 // DEPENDENCIES
 const methodOverride = require('method-override')
+const mongoose = require('mongoose')
 
 // configuration
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
 app.use(express.urlencoded({extended: true}));
+
 
 
 // // MIDDLEWARE
@@ -37,3 +39,5 @@ app.listen(PORT, () => {
     console.log('Listening to port', PORT);
 })
 
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => console.log('connected to mongo: ', process.env.MONGO_URI))
+  
