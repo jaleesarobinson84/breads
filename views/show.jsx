@@ -24,6 +24,8 @@ function Show ({bread, index}) {
             <img src={bread.image} alt={bread.name} />
             <p>{bread.getBakedBy()}</p>
 
+            <a href={`/breads/${bread.id}/edit`}><button>Edit</button></a>
+
             <li><a href="/breads">GO HOME</a></li>
         </Default>
     )
