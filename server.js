@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 })
 
 // breads
-const breadsController = require('./controllers/breads_controller.js')
+const breadsController = require('./controllers/breads_controller')
 app.use('/breads', breadsController)
 
 // bakers 
