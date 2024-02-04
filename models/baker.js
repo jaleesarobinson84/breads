@@ -1,6 +1,6 @@
 // dependencies
 const mongoose = require('mongoose')
-const {schema} = mongoose
+const {Schema} = mongoose
 
 // schema
 const bakerSchema = new Schema({
