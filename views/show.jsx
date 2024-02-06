@@ -7,7 +7,6 @@ function Show ({bread, index}) {
     return (
         <Default>
             <h2>Show Page</h2>
-            <a href={`/breads/${bread.id}/edit`}><button>Edit</button></a>
            <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
         <input type='submit' value="DELETE"/>
         </form>
