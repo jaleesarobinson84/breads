@@ -9,17 +9,18 @@ const bakerSeedData = require('../models/baker_seed.js')
 baker.get('/data/seed', (req, res) => {
     Baker.insertMany(bakerSeedData)
         .then(res.redirect('/breads'))
-
 })
 
-// Index
-baker.get('/', (req, res) => {
-    Baker.find()
-    .populate('breads')
-    .then(foundBakers => {
-        res.send(foundBakers)
-    })
 
+// Index
+baker.get('/', async (req, res) => {
+ const foundBakers = await Baker.find()
+ const foundBreads = await Bread.find().limit(2)
+ res.render('index', {
+    breads: foundBreads,
+    bakers: foundBakers,
+    title: 'Index Page'
+    })
 })
 
 // Show: 
