@@ -19,7 +19,7 @@ baker.get('/', async (req, res) => {
  res.render('index', {
     breads: foundBreads,
     bakers: foundBakers,
-    title: 'Index Page'
+    title: 'index Page'
     })
 })
 
