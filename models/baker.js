@@ -2,7 +2,6 @@
 const mongoose = require('mongoose')
 const {Schema} = mongoose
 const Bread = require('./bread')
-const baker = require('../controllers/bakers_controller')
 
 // schema
 const bakerSchema = new Schema({

@@ -15,7 +15,7 @@ baker.get('/data/seed', (req, res) => {
 // Index
 baker.get('/', async (req, res) => {
  const foundBakers = await Baker.find()
- const foundBreads = await Bread.find().limit(2)
+ const foundBreads = await Bread.find()
  res.render('index', {
     breads: foundBreads,
     bakers: foundBakers,

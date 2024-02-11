@@ -1,5 +1,5 @@
+// dependencies
 const express = require('express')
-// DEPENDENCIES
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 
